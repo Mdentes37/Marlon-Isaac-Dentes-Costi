@@ -1,0 +1,25 @@
+  h1 {
+    color: purple;
+   background-color: #d8da3d;
+}
+/* selector de clase (class)  para regla 2*/
+.miclase {
+ background: #02B1FC;
+ margin: 1px;
+ padding: 1px;
+ text-align: center;
+ color: white;
+ font-size: 14px;
+}
+
+
+}
+/* selector de id  para regla 3*/
+#unico {
+ background: yellow;
+ margin: 1px;
+ padding: 1px;
+ text-align: center;
+ color: orange;
+ font-size: 14px;
+}
