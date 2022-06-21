@@ -8,11 +8,14 @@
 </head>
 <body>
     <script>
-var tirarmonedas = prompt("introduce un numero");
+var tirarmonedas = prompt("si quieres tirar un dado, pulsa 1");
 
-if (numero % 2 ==0) {
+var aleatorio= parseInt((Math.random
 
-    alert("El numero que has introducido es par"); 
+() * 26) + 1);
+
+
+    alert("El numero que has introducido es par, "); 
 } else {
 
 alert("No es par")
