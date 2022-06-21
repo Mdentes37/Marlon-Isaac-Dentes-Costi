@@ -8,50 +8,118 @@
     <title>Document</title>
     <style>
         body {
-            padding: 3%;
-            background-color: aliceblue;
+            padding: 5%;
+            background-color: azure;
         }
     </style>
 </head>
 
+
+
 <body>
+
     <h1>
-        Ejercicio 1
+        Ejercicios de programación secuencial
     </h1>
     <hr>
+    <h2>Ejercicio 1</h2>
     <p>Diseñar una funcion que lea el valor correspondiente a una distancia en millas marinas y las escriba expresadas en metros. Sabiendo que 1 milla marina equivale a 1852 metros.
+
     </p>
 
-    <form action="">
-        <label for="number"> introduce valor en millas nauticas</label>
-        <input type="number" name="" id="number">
-<br>
+    <form action="" method="POST" id="form">
 
-        <input type="button" value="Enviar" onclick="ejercicio1()">
-<br>        
-        <input type="enviar" value="Isaac" onclick="ejercicio1()">
+        <label for="valor">Introduce millas marinas</label>
+        <input id="valor" type="number">
+
+        <input type="button" value="enviar" onclick="ejercicio1Avanzado()">
 
     </form>
 
-    <div id="respuesta"> </div>
+    <div id="respuesta"></div>
+    <hr>
+
+    <h2>Ejercicio 2</h2>
+    <p>
+        Diseñar una clase que escribe el porcentaje descontado en una compra, introduciendo por teclado el precio de la tarifa y el precio pagado.
+    </p>
+
+
+    <form action="" method="POST" id="form">
+        <label for="tarifa">Introduce precio de la tarifa</label>
+
+        <input id="tarifa" type="number">
+
+
+
+        <label for="pagado">Introduce precio pagado</label>
+
+        <input id="pagado" type="number">
+
+        </table>
+        <br>
+
+        <input type="button" value="enviar" onclick="ejercicio2()">
+
+    </form>
+    <div id="respuesta2"></div>
+
 
     <script>
-        var nombre = "pepe";
+        function ejercicio2() {
+
+            var precioTarifa = parseInt(document.getElementById('tarifa').value);
+
+            var precioPagado = parseInt(document.getElementById('pagado').value);
+
+            var descuento =
+                (precioTarifa - precioPagado) * 100 / precioTarifa;
+
+
+            precioPagado = parseInt(document.getElementById('valor').value);
+
+
+
+            document.getElementById("respuesta2").innerHTML = `<p> El total del descuento es de ${descuento}% </p>
+                `;
+        }
 
         function ejercicio1() {
 
-            var millasNauticas = document.getElementById("number").value;
+            var millasNauticas = null;
 
-            var respuesta = millasNauticas * 1852;
+            millasNauticas = parseInt(document.getElementById('valor').value);
 
-            console.log(respuesta);
-
-
-            document.getElementById("respuesta").innerHTML = ` <h2>El resultado de la operacion es ${respuesta}</h2> `;
+            console.log(millasNauticas);
+            var metros = millasNauticas * 1852;
 
 
+            document.getElementById("respuesta").innerHTML = `<p> ${millasNauticas} millas marinas son ${metros} metros </p>
+                `;
+            form.reset();
+        };
 
-        }
+        function ejercicio1Avanzado() {
+
+            var millasNauticas = null;
+
+            millasNauticas = parseInt(document.getElementById('valor').value);
+
+            console.log(millasNauticas);
+            var metros = millasNauticas * 1852;
+
+            if (isNaN(millasNauticas)) {
+                alert("Intruduce algún valor");
+            } else {
+                document.getElementById("respuesta").innerHTML = `<p> ${millasNauticas} millas marinas son ${metros} metros </p>
+                `;
+            }
+
+
+
+
+            form.reset();
+        };
     </script>
 </body>
 

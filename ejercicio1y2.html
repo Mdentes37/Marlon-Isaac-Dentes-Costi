@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 5%;
+            background-color: azure;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <h1>
+        Ejercicios de programación secuencial
+    </h1>
+    <hr>
+    <h2>Ejercicio 3</h2>
+    <p>Diseñar una clase que pida por teclado dos números enteros y muestre su suma, resta, multiplicación, división y el resto de la división. Si la operación no es conmutativa, también se mostrará el resultado invirtiendo los operadores.
+
+    </p>
+
+    <form action="" method="POST" id="form">
+
+        <label for="num1">Introduce num1</label>
+        <input id="num1" type="number">
+        <br>
+
+        <label for="num2">Introduce num2</label>
+        <input id="num2" type="number">
+        <br>
+
+        <input type="button" value="enviar" onclick="ejercicio()">
+
+
+    </form>
+
+    <div id="respuesta"></div>
+
+
+
+    <script>
+        function ejercicio() {
+
+            var num1 = parseFloat(document.getElementById('num1').value);
+
+            var num2 = parseFloat(document.getElementById('num2').value);
+
+            var suma;
+            var resta1;
+            var resta2;
+            var multiplicacion;
+            var resto1;
+            var resto2;
+
+            suma = num1 + num2;
+
+            resta1 = num1 - num2;
+            resta2 = num2 - num1;
+
+            resto1 = num1 % num2;
+            multiplicacion = num1 * num2;
+
+
+
+
+            document.getElementById("respuesta").innerHTML = `<p> la suma de  ${num1} más ${num2} es de ${suma} </p>
+
+            <p> la resta de  ${num1} menos ${num2} es de ${resta1} </p>
+
+            <p> la resta de  ${num2} menos ${num1} es de ${resta2} </p>
+
+            <p> la multiplicacion de  ${num1} por ${num2} es de ${multiplicacion} </p>
+
+            <p> El resto de ${num1} entre ${num2} es de ${resto1}</p>
+
+            <p> El resto de ${num2} entre ${num1} es de ${resto2}</p>
+
+                `;
+        }
+    </script>
+</body>
+
+</html>

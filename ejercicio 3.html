@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 5%;
+            background-color: azure;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <h1>
+        Ejercicios de programación secuencial
+    </h1>
+    <hr>
+    <h2>Ejercicio 4</h2>
+    <p> Diseñar una clase que obtiene la última cifra de un número introducido. </p>
+
+    <form action="" method="POST" id="form">
+
+        <label for="num1">Introduce número para averiguar el último digito</label>
+        <input id="num1" type="number">
+        <br>
+
+        <input type="button" value="enviar" onclick="ejercicio()">
+
+
+    </form>
+
+    <div id="respuesta"></div>
+
+
+
+    <script>
+        function ejercicio() {
+
+            var num1 = parseInt(document.getElementById('num1').value);
+            var ultimovalor = num1 % 10;
+
+
+
+
+            document.getElementById("respuesta").innerHTML = `<p> la última cifra es de ${ultimovalor} </p>
+
+                `;
+        }
+    </script>
+</body>
+
+</html>
