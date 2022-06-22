@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <script>
-var tirarmonedas = prompt("si quieres tirar un dado, pulsa 1");
+    
+<script>
+alert("dados 3 numeros, averiguar cual es el mas pequeño"); 
+var num1 = prompt("Introduce el primer numero");
+var num2 = prompt("Introduce el segundo numero"); 
+var num3 = prompt("Introduce el tercer numero"); 
 
-var aleatorio= parseInt((Math.random
+var numMenor = num1;
 
-() * 26) + 1);
-
-
-    alert("El numero que has introducido es par, "); 
-} else {
-
-alert("No es par")
+if(numMenor < num2)
+   numMenor = num2; {
 
 }
 
+if(numMenor < num3) {
+   numMenor = num3; 
+}
 
+alert("El menor es " + numMenor)
 
-    </script>
+</script>
 </body>
 </html>
