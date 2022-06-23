@@ -12,7 +12,9 @@
  font-size: 14px;
 }
 
-
+body{
+  background-color: #b1b34e
+}
 }
 /* selector de id  para regla 3*/
 #unico {
