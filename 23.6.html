@@ -9,23 +9,17 @@
 </head>
 <body>
 <script>
+var i = 0;
+var num = 0;
+var lista = 0;
 
-var num = prompt("introduce num");
- if (num > 9 && num < 100) {
-if (num % 2 == 0) { 
-    var resultados = num * 2; 
-    alert(resultado)
+while (i < 15) {
+
+lista = lista + i + "<br>";
+i++;
 }
 
-}
-
-
-
-
-
-
-
-
+document.getElementById("tabla").innerHTML = lista;
 
 </script>
 </body>
